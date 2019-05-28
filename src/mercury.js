@@ -21,6 +21,7 @@ Mercury.requestChart = function (canvasElement, canvasCollection) {
             'params': JSON.parse(canvasElement.dataset.chartParams)
         }
     }).done(function (data) {
+        console.log(canvasElement, canvasCollection);
         chart = Mercury.createChart(canvasElement, data);
         Mercury.collection.push(chart);
     }).always(function (data) {
